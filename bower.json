@@ -1,0 +1,18 @@
+{
+  "name": "chartist-elements",
+  "version": "0.0.0",
+  "homepage": "https://github.com/ohanhi/chartist-elements",
+  "authors": [
+    "ohanhi <ossi.hanhinen@gmail.com>"
+  ],
+  "main": "index.html",
+  "keywords": [
+    "polymer",
+    "webcomponents"
+  ],
+  "license": "BSD (3-clause)",
+  "dependencies": {
+    "polymer": "~0.9.0",
+    "chartist": "~0.8.0"
+  }
+}
