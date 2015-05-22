@@ -1,0 +1,86 @@
+<link rel="import" href="bower_components/polymer/polymer.html">
+<link rel="import" href="chartist-js-import.html">
+
+<dom-module is="chartist-pie">
+  <!-- Chartist lib styles -->
+  <link rel="stylesheet" href="bower_components/chartist/dist/chartist.min.css">
+  <!-- Module styles -->
+  <style>
+  :host {
+    font-family: sans-serif;
+  }
+  .ct-label {
+    color: white;
+  }
+  </style>
+
+  <template>
+    <div id="chart" class="ct-chart ct-perfect-fourth"></div>
+  </template>
+</dom-module>
+
+<script>
+(function(){
+  var elementName = 'chartist-pie';
+
+  Polymer({
+    is: elementName,
+    properties: {
+      series: {
+        type: Array,
+        value: [65,59,90,81,56,55,40],
+        observer: 'render'
+      },
+      labels: {
+        type: Array,
+        value: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul"],
+        observer: 'render'
+      },
+      options: {
+        type: Object,
+        value: {
+          chartPadding: 45,
+          labelOffset: 35,
+          labelDirection: 'explode'
+        },
+        observer: 'render'
+      },
+      responsiveOptions: {
+        type: Object,
+        observer: 'render',
+        value: {}
+      }
+    },
+    render: function() {
+      if (!this.series || !this.labels || !this.options) {
+        return;
+      }
+
+      var element = this.$.chart,
+        domEl = Polymer.dom(element);
+
+      var data = {
+        series: this.series,
+        labels: this.labels
+      };
+
+      var opts = Object(this.options);
+      opts.classNames = {
+        chart:  elementName + ' ct-pie-chart',
+        series: elementName + ' ct-series',
+        slice:  elementName + ' ct-slice',
+        donut:  elementName + ' ct-donut',
+        label:  elementName + ' ct-label'
+      };
+
+
+      if (this.chart) {
+        this.chart.detach();
+      }
+
+      this.chart =
+        new Chartist.Pie(element, data, opts, this.responsiveOptions);
+    }
+  });
+})();
+</script>
