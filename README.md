@@ -2,7 +2,7 @@
 Polymer elements for [Chartist](https://gionkunz.github.io/chartist-js).
 
 Live demo:
-[](http://ohanhi.github.io/chartist-elements/)
+[http://ohanhi.github.io/chartist-elements/](http://ohanhi.github.io/chartist-elements/)
 
 ## Usage
 
