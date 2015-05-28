@@ -11,26 +11,66 @@
     <style>
       body {
         font-family: sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #eee;
       }
-      h1 {
+      .main {
+        background-color: #fefefe;
+        margin: 2em auto;
+        padding: 1em;
+        width: 90%;
+        max-width: 60em;
+        box-shadow: 0 3px 20px rgba(0,0,0, 0.3);
+      }
+      h1, h2 {
         font-family: monospace;
       }
     </style>
   </head>
   <body>
+
+  <div class="main">
+    <h1>Chartist elements</h1>
+
     <p>
-      These elements' source code is available at
-      <a href="https://github.com/ohanhi/chartist-elements">github.com/ohanhi/chartist-elements</a>
+      These elements and their source codes are available at
+      <a href="https://github.com/ohanhi/chartist-elements">https://github.com/ohanhi/chartist-elements</a>
     </p>
 
-    <h1>chartist-pie</h1>
+    <h2>chartist-pie</h2>
+<pre>&lt;chartist-pie
+  series='[75, 25]'
+  labels='["Pacman", "Not Pacman"]'&gt;
+  &lt;/chartist-pie&gt;
+</pre>
     <chartist-pie
-      series='[6,4,2,2]'
-      labels='["me", "you", "foo", "bar"]'>
+      series='[75, 25]'
+      labels='["Pacman", "Not Pacman"]'>
+      </chartist-pie>
     </chartist-pie>
-    <h1>chartist-line</h1>
-    <chartist-line></chartist-line>
-    <h1>chartist-bar</h1>
-    <chartist-bar></chartist-bar>
+
+    <h2>chartist-line</h2>
+<pre>&lt;chartist-line
+  series='[[25, 22, 18, 19, 24], [19, 25, 26, 24, 23]]'
+  labels='["Mon", "Tue", "Wed", "Thu", "Fri"]'&gt;
+  &lt;/chartist-line&gt;
+</pre>
+    <chartist-line
+      series='[[25, 22, 18, 19, 24], [19, 25, 26, 24, 23]]'
+      labels='["Mon", "Tue", "Wed", "Thu", "Fri"]'>
+      </chartist-line>
+
+    <h2>chartist-bar</h2>
+<pre>&lt;chartist-bar
+  series='[[65,59,90,81,56,55,40], [30,65,59,40,90,56,55]]'
+  labels='["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul"]'&gt;
+  &lt;/chartist-bar&gt;
+</pre>
+    <chartist-bar
+      series='[[65,59,90,81,56,55,40], [30,65,59,40,90,56,55]]'
+      labels='["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul"]'>
+      </chartist-bar>
+  </div>
   </body>
 </html>
