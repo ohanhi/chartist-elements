@@ -12,7 +12,7 @@
   ],
   "license": "BSD (3-clause)",
   "dependencies": {
-    "polymer": "~0.9.0",
+    "polymer": "~1.0.0",
     "chartist": "~0.8.0"
   }
 }
